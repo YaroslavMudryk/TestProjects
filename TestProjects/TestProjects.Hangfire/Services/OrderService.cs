@@ -5,9 +5,11 @@ namespace TestProjects.Hangfire.Services
     public class OrderService
     {
         private readonly IBackgroundJobClient _backgroundJobClient;
-        public OrderService(IBackgroundJobClient backgroundJobClient)
+        private readonly IServiceScopeFactory _serviceScopeFactory;
+        public OrderService(IBackgroundJobClient backgroundJobClient, IServiceScopeFactory serviceScopeFactory)
         {
             _backgroundJobClient = backgroundJobClient;
+            _serviceScopeFactory = serviceScopeFactory;
         }
 
         public void ProcessOrder()
@@ -17,6 +19,8 @@ namespace TestProjects.Hangfire.Services
 
         public void UpdateOrderStatus()
         {
+            using var scope = _serviceScopeFactory.CreateScope();
+            //var dbContext = scope.ServiceProvider.GetService<DbContext>();
             Console.WriteLine($"Статус оновлений");
         }
     }
