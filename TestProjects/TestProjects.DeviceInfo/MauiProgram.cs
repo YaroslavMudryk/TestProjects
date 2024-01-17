@@ -14,7 +14,10 @@ namespace TestProjects.DeviceInfo
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 })
-                .Services.AddTransient<IGetDeviceInfo, GetDeviceInfo>();
+                .Services
+                .AddTransient<IGetDeviceInfo, GetDeviceInfo>()
+                .AddTransient<IReadPhoneState, ReadPhoneState>()
+                .AddScoped<MainPage>();
 
             return builder.Build();
         }
