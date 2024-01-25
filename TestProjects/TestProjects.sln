@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProjects.Redis", "TestP
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notifications", "Notifications", "{60BB0539-FA6F-4497-89C7-7FFADAD88878}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProjects.Notify.Server", "TestProjects.Notify.Server\TestProjects.Notify.Server.csproj", "{64EE23F9-0CC9-4B10-B733-3FB1B8A214C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProjects.Notify.Server", "TestProjects.Notify.Server\TestProjects.Notify.Server.csproj", "{64EE23F9-0CC9-4B10-B733-3FB1B8A214C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProjects.ImeiCheck", "TestProjects.ImeiCheck\TestProjects.ImeiCheck.csproj", "{9D9BFA03-32D7-43BC-9815-5F3D5BBBF9E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,12 @@ Global
 		{64EE23F9-0CC9-4B10-B733-3FB1B8A214C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64EE23F9-0CC9-4B10-B733-3FB1B8A214C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64EE23F9-0CC9-4B10-B733-3FB1B8A214C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D9BFA03-32D7-43BC-9815-5F3D5BBBF9E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D9BFA03-32D7-43BC-9815-5F3D5BBBF9E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D9BFA03-32D7-43BC-9815-5F3D5BBBF9E0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9D9BFA03-32D7-43BC-9815-5F3D5BBBF9E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D9BFA03-32D7-43BC-9815-5F3D5BBBF9E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D9BFA03-32D7-43BC-9815-5F3D5BBBF9E0}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

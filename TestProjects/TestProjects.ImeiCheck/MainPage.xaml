@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProjects.ImeiCheck.MainPage"
+             Title="Перевірка по IMEI">
+
+    <ScrollView>
+        <Grid RowDefinitions="auto,auto,*,auto">
+            <Label x:Name="balance" Grid.Row="0" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Center" />
+
+            <Grid Grid.Row="1" RowDefinitions="*, *" ColumnDefinitions="*, auto">
+                <Entry x:Name="deviceIdEntry" Grid.Row="0" Placeholder="IMEI або серійний номер" Grid.ColumnSpan="2" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Fill" Margin="10" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" ClearButtonVisibility="WhileEditing"/>
+                <Picker x:Name="servicePicker" Grid.Row="1" Grid.Column="0" Title="Оберіть тип перевірки" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" ItemDisplayBinding="{Binding Title}" SelectedIndexChanged="servicePicker_SelectedIndexChanged" Margin="10" FontSize="16"/>
+                <Button x:Name="checkImei" Grid.Row="1" Grid.Column="1" Text="Перевірити" Margin="10" FontSize="16" Clicked="checkImei_Clicked"/>
+            </Grid>
+
+            <Grid Grid.Row="2" Padding="20" x:Name="contentGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="IMEI2:" FontAttributes="Bold" Grid.Row="0"/>
+                <Label x:Name="Imei2" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Cерійний номер:" FontAttributes="Bold" Grid.Row="1"/>
+                <Label x:Name="Serial" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Номер DO:" FontAttributes="Bold" Grid.Row="2"/>
+                <Label x:Name="DoNumber" Grid.Row="2" Grid.Column="1"/>
+
+                <Label Text="Виробник:" FontAttributes="Bold" Grid.Row="3"/>
+                <Label x:Name="Manufacturer" Grid.Row="3" Grid.Column="1"/>
+
+                <Label Text="Повне ім'я:" FontAttributes="Bold" Grid.Row="4"/>
+                <Label x:Name="FullName" Grid.Row="4" Grid.Column="1"/>
+
+                <Label Text="Номер моделі:" FontAttributes="Bold" Grid.Row="5"/>
+                <Label x:Name="ModelNumber" Grid.Row="5" Grid.Column="1"/>
+
+                <Label Text="Назва моделі:" FontAttributes="Bold" Grid.Row="6"/>
+                <Label x:Name="ModelName" Grid.Row="6" Grid.Column="1"/>
+
+                <Label Text="Дата виробництва:" FontAttributes="Bold" Grid.Row="7"/>
+                <Label x:Name="ProductionDate" Grid.Row="7" Grid.Column="1"/>
+
+                <Label Text="Гарантія до:" FontAttributes="Bold" Grid.Row="8"/>
+                <Label x:Name="WarrantyUntil" Grid.Row="8" Grid.Column="1"/>
+
+                <Label Text="Статус гарантії:" FontAttributes="Bold" Grid.Row="9"/>
+                <Label x:Name="WarrantyStatus" Grid.Row="9" Grid.Column="1"/>
+
+                <Label Text="Перевізник:" FontAttributes="Bold" Grid.Row="10"/>
+                <Label x:Name="Carrier" Grid.Row="10" Grid.Column="1"/>
+
+                <Label Text="Продається за країною:" FontAttributes="Bold" Grid.Row="11"/>
+                <Label x:Name="SoldByCountry" Grid.Row="11" Grid.Column="1"/>
+
+                <Label Text="Доставка в країну:" FontAttributes="Bold" Grid.Row="12"/>
+                <Label x:Name="ShipToCountry" Grid.Row="12" Grid.Column="1"/>
+
+                <Label Text="Дата продажу:" FontAttributes="Bold" Grid.Row="13"/>
+                <Label x:Name="SoldDate" Grid.Row="13" Grid.Column="1"/>
+
+                <Label Text="Дата відвантаження:" FontAttributes="Bold" Grid.Row="14"/>
+                <Label x:Name="ShipDate" Grid.Row="14" Grid.Column="1"/>
+
+                <Label Text="IMEI:" FontAttributes="Bold" Grid.Row="15"/>
+                <Label x:Name="Imei" Grid.Row="15" Grid.Column="1"/>
+            </Grid>
+
+            <Grid Grid.Row="3">
+                <Button Text="Показати історію запитів" FontSize="16" VerticalOptions="Center" HorizontalOptions="Center" Margin="10"/>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>
