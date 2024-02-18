@@ -1,4 +1,5 @@
-﻿using TestProjects.DeviceInfo.Services;
+﻿using TestProjects.DeviceInfo.Platforms.iOS;
+using TestProjects.DeviceInfo.Services;
 
 namespace TestProjects.DeviceInfo
 {
@@ -15,8 +16,7 @@ namespace TestProjects.DeviceInfo
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 })
                 .Services
-                .AddTransient<IGetDeviceInfo, GetDeviceInfo>()
-                .AddTransient<IReadPhoneState, ReadPhoneState>()
+                .AddTransient<IGetDeviceInfo, IosDeviceInfo>()
                 .AddScoped<MainPage>();
 
             return builder.Build();

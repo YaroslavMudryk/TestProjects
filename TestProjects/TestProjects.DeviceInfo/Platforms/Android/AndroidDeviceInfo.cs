@@ -4,7 +4,7 @@ using static Android.Provider.Settings;
 
 namespace TestProjects.DeviceInfo
 {
-    public class GetDeviceInfo : IGetDeviceInfo
+    public class AndroidDeviceInfo : IGetDeviceInfo
     {
         public string GetDeviceId()
         {
